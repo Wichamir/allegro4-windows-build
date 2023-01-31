@@ -25,7 +25,7 @@ Tested with MSVC using Visual Studio, but it may also compile with MinGW.
 ```bat
 git clone https://github.com/Wichamir/allegro4-windows-build
 cd allegro4-windows-build
-git submodule init
+git submodule update --init
 ```
 
 ### Install dependencies
@@ -46,13 +46,14 @@ Run CMake to configure the project.
 ```bat
 cd allegro5
 cmake -B build -S . -D CMAKE_TOOLCHAIN_FILE=../dependencies.cmake
+explorer build
 ```
 
-In case you're using Visual Studio you should get a nice .sln file in a newly created build directory. Now just open it.
+In case you're using Visual Studio you should get a nice .sln file. Now you can just open it.
 
 ### Build
 
-In Visual Studio right click the `allegro` project and click `Build`. Now the building process should start. If everything goes well you should get a lib directory with a bunch of library files, amongst which should be alleg44.lib.
+In Visual Studio right click the `allegro` project and click `Build`. Now the building process should start. If everything goes well you should get a lib directory with alleg44.lib
 
 ### Done!
 
