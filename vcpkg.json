@@ -1,0 +1,11 @@
+{
+    "name": "allegro4-windows-build",
+    "version": "1.0.0",
+    "dependencies": [
+        "pkgconf",
+        "zlib",
+        "libpng",
+        "libogg",
+        "libvorbis"
+    ]
+  }
