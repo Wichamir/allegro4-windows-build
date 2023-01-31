@@ -46,14 +46,33 @@ Run CMake to configure the project.
 ```bat
 cd allegro5
 cmake -B build -S . -D CMAKE_TOOLCHAIN_FILE=../dependencies.cmake
-explorer build
+explorer .\build
 ```
 
 In case you're using Visual Studio you should get a nice .sln file. Now you can just open it.
 
 ### Build
 
-In Visual Studio right click the `allegro` project and click `Build`. Now the building process should start. If everything goes well you should get a lib directory with alleg44.lib
+In Visual Studio right click the `allegro` project and click `Build`. Now the building process should start. It may take a while, depending on your hardware. 
+
+### Output files
+
+When the compilation process finishes, you should get these files:
+
+- include\allegro\platform\alplatf.h
+- lib\RelWithDebInfo\alleg44.lib
+- lib\RelWithDebInfo\alleg44.dll
+
+Their location mind vary depending on compiler, but this is what I got by using Visual Studio.
+
+Now if you want to actually use this library with your project:
+
+- include following directories
+  - allegro5\include
+  - allegro5\build\include
+- link alleg44.lib and alleg44.dll to your project
+
+When you deploy your project, you want to include alleg44.dll with your .exe file, so the end users won't get missing .dll errors.
 
 ### Done!
 
