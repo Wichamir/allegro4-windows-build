@@ -2,6 +2,10 @@
 
 I've recently wanted to revisit some of my old C++ game projects, which were written in Allegro 4. The problem is, it's a legacy library. And while you can still easily install it on Linux (`sudo apt install liballegro4-dev`), on Windows you're pretty much forced to compile it yourself. And it's a real choir, unfortunately. Building all of dependencies yourself and especially getting your hands on older versions of DirectX is painful. I had to spend quite a long time to figure out how to build it, because the documentation and online guides are kind of lacking and out of date. So I made this repository in case anyone is still struggling to build this library nowadays.
 
+## Pre-compiled binaries
+
+If you want to simply download a pre-compiled version for MSVC, you can do it [here](https://github.com/Wichamir/allegro4-windows-build/releases/tag/v1.0.0). This contains everything you will need to compile a legacy game using Allegro 4. If you want to build the library yourself, however, you can read further.
+
 ## Requirements
 
 Before you can actually start the compilation process you will have to install some dependencies (if you don't have them already installed).
@@ -49,7 +53,7 @@ cmake -B build -S . -D CMAKE_TOOLCHAIN_FILE=../dependencies.cmake
 explorer .\build
 ```
 
-In case you're using Visual Studio you should get a nice .sln file. Now you can just open it.
+In case you're using Visual Studio you should get a nice .sln file. Now you can simply open it.
 
 ### Build
 
@@ -63,7 +67,7 @@ When the compilation process finishes, you should get these files:
 - lib\RelWithDebInfo\alleg44.lib
 - lib\RelWithDebInfo\alleg44.dll
 
-Their location mind vary depending on compiler, but this is what I got by using Visual Studio.
+Their location might vary depending on compiler, but this is what I got by using Visual Studio.
 
 Now if you want to actually use this library with your project:
 
