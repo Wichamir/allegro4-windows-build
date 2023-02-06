@@ -41,8 +41,6 @@ To install the dependencies we will use vcpkg. In this case, we're using vcpkg i
 .\vcpkg\vcpkg install
 ```
 
-Unfortunately Allegro 4 also requires older DirectX version (containing ddraw.lib), which is not available in vcpkg, but worry not, because I've bundled it with this repository.
-
 ### Run CMake
 
 Run CMake to configure the project.
